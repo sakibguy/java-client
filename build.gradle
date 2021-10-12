@@ -9,7 +9,7 @@ plugins {
     id 'checkstyle'
     id 'signing'
     id 'org.owasp.dependencycheck' version '6.3.2'
-    id 'com.github.johnrengelman.shadow' version '7.0.0'
+    id 'com.github.johnrengelman.shadow' version '7.1.0'
 }
 
 repositories {
@@ -23,7 +23,7 @@ configurations {
 
 dependencies {
     ecj 'org.eclipse.jdt:ecj:3.26.0'
-    lombok 'org.projectlombok:lombok:1.18.20'
+    lombok 'org.projectlombok:lombok:1.18.22'
 }
 
 java {
@@ -50,7 +50,7 @@ compileJava {
 }
 
 dependencies {
-    compileOnly('org.projectlombok:lombok:1.18.16')
+    compileOnly('org.projectlombok:lombok:1.18.22')
     annotationProcessor('org.projectlombok:lombok:1.18.20')
     api ("org.seleniumhq.selenium:selenium-java") {
         version {
@@ -130,7 +130,7 @@ publishing {
         mavenJava(MavenPublication) {
             groupId = 'io.appium'
             artifactId = 'java-client'
-            version = '7.5.1'
+            version = '7.6.0'
             from components.java
             pom {
                 name = 'java-client'
