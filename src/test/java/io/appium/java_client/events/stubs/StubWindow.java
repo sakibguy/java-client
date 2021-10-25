@@ -14,28 +14,37 @@
  * limitations under the License.
  */
 
-package io.appium.java_client.android;
+package io.appium.java_client.events.stubs;
 
-import io.appium.java_client.remote.MobileOptions;
-import io.appium.java_client.remote.MobilePlatform;
-import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebDriver.Window;
 
-/**
- * Use the specific options class for your driver,
- * for example UiAutomator2Options.
- */
-@Deprecated
-public class AndroidOptions extends MobileOptions<AndroidOptions> {
-    public AndroidOptions() {
-        setAndroidPlatformName();
+public class StubWindow implements Window {
+    public StubWindow() {
     }
 
-    public AndroidOptions(Capabilities source) {
-        super(source);
-        setAndroidPlatformName();
+    public void setSize(Dimension targetSize) {
     }
 
-    private void setAndroidPlatformName() {
-        setPlatformName(MobilePlatform.ANDROID);
+    public void setPosition(Point targetPosition) {
+    }
+
+    public Dimension getSize() {
+        return null;
+    }
+
+    public Point getPosition() {
+        return null;
+    }
+
+    public void maximize() {
+    }
+
+    @Override
+    public void minimize() {
+    }
+
+    public void fullscreen() {
     }
 }

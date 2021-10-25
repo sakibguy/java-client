@@ -14,28 +14,24 @@
  * limitations under the License.
  */
 
-package io.appium.java_client.android;
+package io.appium.java_client.events.stubs;
 
-import io.appium.java_client.remote.MobileOptions;
-import io.appium.java_client.remote.MobilePlatform;
-import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Alert;
 
-/**
- * Use the specific options class for your driver,
- * for example UiAutomator2Options.
- */
-@Deprecated
-public class AndroidOptions extends MobileOptions<AndroidOptions> {
-    public AndroidOptions() {
-        setAndroidPlatformName();
+public class StubAlert implements Alert {
+    public StubAlert() {
     }
 
-    public AndroidOptions(Capabilities source) {
-        super(source);
-        setAndroidPlatformName();
+    public void dismiss() {
     }
 
-    private void setAndroidPlatformName() {
-        setPlatformName(MobilePlatform.ANDROID);
+    public void accept() {
+    }
+
+    public String getText() {
+        return "";
+    }
+
+    public void sendKeys(String keysToSend) {
     }
 }
